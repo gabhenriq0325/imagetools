@@ -1,12 +1,12 @@
 <script>
 	import { onMount } from 'svelte';
-	import static_image from '../../static/favicon.png?blur=1';
+	import static_image from './favicon.png?blur=1';
 
 	let dynamic_image;
 	let name = 'favicon';
 
 	onMount(async () => {
-		dynamic_image = (await import(`../../static/${name}.png?blur=1`)).default;
+		dynamic_image = (await import(`./${name}.png?blur=1`)).default;
 	});
 </script>
 
